@@ -1,6 +1,6 @@
 export const lightTheme = {
   background: '#FAF8F3',
-  switchBackground: '#FFFFF',
+  switchBackground: '#FFFFFF',
   switch: '#FFCC33',
   highlight: '#9DC6F3',
   font: '#000000',
@@ -11,5 +11,5 @@ export const darkTheme = {
   switchBackground: '#474E68',
   switch: '#FFCFDE',
   highlight: '#5566AA',
-  font: '#FFFFF',
+  font: '#FFFFFF',
 };

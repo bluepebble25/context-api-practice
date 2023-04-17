@@ -1,14 +1,25 @@
 import React from 'react';
 
-function ToggleButton() {
+function ToggleButton({ toggleTheme, theme }) {
   return (
     <div
       style={{ display: 'flex', justifyContent: 'center', marginRight: '12px' }}
     >
-      <input type="checkbox" id="toggle" hidden />
+      <input type="checkbox" id="toggle" hidden onClick={toggleTheme} />
 
-      <label for="toggle" class="toggleSwitch" style={toggleSwitchStyle}>
-        <span class="toggleButton" style={toggleButtonStyle}></span>
+      <label
+        htmlFor="toggle"
+        className="toggleSwitch"
+        style={Object.assign({}, toggleSwitchStyle, {
+          backgroundColor: theme.switchBackground,
+        })}
+      >
+        <span
+          className="toggleButton"
+          style={Object.assign({}, toggleButtonStyle, {
+            backgroundColor: theme.switch,
+          })}
+        ></span>
       </label>
     </div>
   );
@@ -20,7 +31,6 @@ const toggleSwitchStyle = {
   display: 'block',
   position: 'relative',
   borderRadius: '30px',
-  backgroundColor: '#fff',
   boxShadow: '0 0 16px 3px rgba(0 0 0 / 15%)',
   cursor: 'pointer',
 };
@@ -33,7 +43,6 @@ const toggleButtonStyle = {
   left: '4px',
   transform: 'translateY(-50%)',
   borderRadius: '50%',
-  background: '#FFCC33',
 };
 
 export default ToggleButton;

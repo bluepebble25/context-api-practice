@@ -18,6 +18,7 @@ function ToggleButton({ toggleTheme, theme }) {
           className="toggleButton"
           style={Object.assign({}, toggleButtonStyle, {
             backgroundColor: theme.switch,
+            left: theme.switchLeft,
           })}
         ></span>
       </label>
@@ -43,6 +44,7 @@ const toggleButtonStyle = {
   left: '4px',
   transform: 'translateY(-50%)',
   borderRadius: '50%',
+  transition: 'all 0.2s ease-in',
 };
 
 export default ToggleButton;

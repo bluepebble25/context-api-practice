@@ -8,7 +8,8 @@ const ThemeContext = createContext({
 });
 
 function ThemeProvider({ children }) {
-  const [themeMode, setThemeMode] = useState('light');
+  const localTheme = window.localStorage.getItem('theme') || 'light';
+  const [themeMode, setThemeMode] = useState(localTheme);
   const theme = themeMode === 'light' ? lightTheme : darkTheme;
 
   return (
@@ -27,6 +28,10 @@ const useTheme = () => {
   const { themeMode, setThemeMode, theme } = context;
 
   const toggleTheme = () => {
+    window.localStorage.setItem(
+      'theme',
+      themeMode === 'light' ? 'dark' : 'light'
+    );
     setThemeMode(themeMode === 'light' ? 'dark' : 'light');
   };
   return [themeMode, toggleTheme, theme];

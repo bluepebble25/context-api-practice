@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/darkmode-practice/static/css/main.7399dfbc.css",
+    "main.js": "/darkmode-practice/static/js/main.0a612ed1.js",
+    "static/media/moon.png": "/darkmode-practice/static/media/moon.a296e8639091096979a5.png",
+    "static/media/sun.png": "/darkmode-practice/static/media/sun.6d48da504f4816188c8d.png",
+    "index.html": "/darkmode-practice/index.html",
+    "main.7399dfbc.css.map": "/darkmode-practice/static/css/main.7399dfbc.css.map",
+    "main.0a612ed1.js.map": "/darkmode-practice/static/js/main.0a612ed1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7399dfbc.css",
+    "static/js/main.0a612ed1.js"
+  ]
+}
